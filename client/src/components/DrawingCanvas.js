@@ -25,7 +25,7 @@ export default function DrawingCanvas({ socket, room, strokeWidth, userColor }) 
     ctx.lineWidth = strokeWidth;
     ctxRef.current = ctx;
 
-    // --- Remote strokes ---
+  
     socket.on("load-strokes", (strokes) => {
       strokes.forEach(({ points, color, width }) => {
         if (!points || points.length === 0) return;
@@ -66,7 +66,6 @@ export default function DrawingCanvas({ socket, room, strokeWidth, userColor }) 
     };
   }, [room, socket]);
 
-  // ✅ Whenever strokeWidth or color changes, update ctxRef
   useEffect(() => {
     if (ctxRef.current) {
       ctxRef.current.strokeStyle = userColor;
@@ -100,7 +99,7 @@ export default function DrawingCanvas({ socket, room, strokeWidth, userColor }) 
   const draw = (e) => {
     const { offsetX, offsetY } = e.nativeEvent;
 
-    // normalize cursor positions
+ 
     const xNorm = offsetX / canvasRef.current.width;
     const yNorm = offsetY / canvasRef.current.height;
     socket.emit("cursor-move", { room, userId, xNorm, yNorm, name: userName, color: userColor });
