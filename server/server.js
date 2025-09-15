@@ -13,7 +13,7 @@ app.use("/api/rooms", roomsRouter);
 
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] }
+  cors: { origin: "https://whiteboard-1-lfqy.onrender.com", methods: ["GET", "POST"] }
 });
 
 // connection with mongodb
