@@ -8,6 +8,8 @@ Multiple users can join a room using a room code and draw together on a shared c
 ##  Live Demo
 
 Try it here: [**Whiteboard Live App**](https://whiteboard-1-lfqy.onrender.com)
+Frontend: [**Whiteboard App**](https://whiteboard-1-lfqy.onrender.com)  
+🛠 Backend API: [**Whiteboard Server**](https://whiteboard-c7pa.onrender.com) 
 
 ---
 
