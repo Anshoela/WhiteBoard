@@ -87,8 +87,8 @@ Backend: Render
 (currently deployed ✅)
 
 Frontend: Render
-Built with using MERN stack + Socket.IO.
-Live version deployed here: https://whiteboard-1-lfqy.onrender.com
 
-## 📂 Project Structure
+Built with using MERN stack + Socket.IO.
+
+
 
