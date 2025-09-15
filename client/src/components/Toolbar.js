@@ -41,7 +41,6 @@ export default function Toolbar({ onClear, strokeWidth, setStrokeWidth, userColo
       />
       <span>{strokeWidth}px</span>
 
-      {/* Color picker */}
       <label style={{ fontSize: 14 }}>Color:</label>
       <input
         type="color"
