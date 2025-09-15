@@ -73,7 +73,7 @@ export default function DrawingCanvas({ socket, room, strokeWidth, userColor }) 
     }
   }, [userColor, strokeWidth]);
 
-  // --- Local Drawing ---
+
   const startDrawing = (e) => {
     const { offsetX, offsetY } = e.nativeEvent;
 
