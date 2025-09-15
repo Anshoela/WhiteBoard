@@ -25,7 +25,6 @@ export default function Whiteboard() {
     socket.emit("clear-canvas", room);
   };
 
-  // listen for remote cursor moves
   useEffect(() => {
     if (!joined) return;
 
@@ -42,8 +41,7 @@ export default function Whiteboard() {
     };
 
     socket.on("cursor-move", handleCursorMove);
-
-    // cleanup old cursors every 5s
+    
     const tid = setInterval(() => {
       const now = Date.now();
       setCursors((prev) => {
