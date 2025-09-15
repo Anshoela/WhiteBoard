@@ -5,13 +5,16 @@ import RoomJoin from "./RoomJoin";
 import DrawingCanvas from "./DrawingCanvas";
 import UserCursors from "./UserCursor";
 
-const socket = io("https://whiteboard-c7pa.onrender.com");
+const socket = io(process.env.REACT_APP_BACKEND_URL, {
+  transports: ["websocket"], 
+});
+
 
 export default function Whiteboard() {
   const [room, setRoom] = useState(null);
   const [joined, setJoined] = useState(false);
   const [cursors, setCursors] = useState({});
-  const [strokeWidth, setStrokeWidth] = useState(2); // slider state
+  const [strokeWidth, setStrokeWidth] = useState(2); 
   const [userColor, setUserColor] = useState("#000000");
   const [userCount, setUserCount] = useState(0);
 
