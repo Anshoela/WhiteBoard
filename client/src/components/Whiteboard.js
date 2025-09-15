@@ -5,7 +5,7 @@ import RoomJoin from "./RoomJoin";
 import DrawingCanvas from "./DrawingCanvas";
 import UserCursors from "./UserCursor";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://whiteboard-c7pa.onrender.com");
 
 export default function Whiteboard() {
   const [room, setRoom] = useState(null);
